@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "pickles/daemon"
+
+Pickles::Daemon::Runner.new(
+  speed: Pickles::Daemon::Speed.new,
+  network: Pickles::Daemon::Network.new
+).run
