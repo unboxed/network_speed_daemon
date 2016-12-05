@@ -9,10 +9,8 @@ module Pickles
       end
 
       def run
-        loop do
-          client.update_speed_metrics(stats).tap do |response|
-            logger.log("STATUS: #{response.status}; BODY: #{response.body}")
-          end
+        client.update_speed_metrics(stats).tap do |response|
+          logger.log("STATUS: #{response.status}; BODY: #{response.body}")
         end
       end
 
