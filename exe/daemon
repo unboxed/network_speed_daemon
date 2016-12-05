@@ -3,7 +3,15 @@
 require "bundler/setup"
 require "pickles/daemon"
 
+pickles_url = "https://unboxed-pickles.herokuapp.com"
+
+http_client = Faraday.new(url: pickles_url) do |faraday|
+  faraday.adapter  Faraday.default_adapter
+end
+
 Pickles::Daemon::Runner.new(
   speed: Pickles::Daemon::Speed.new,
-  network: Pickles::Daemon::Network.new
+  network: Pickles::Daemon::Network.new,
+  client: Pickles::Daemon::Client.new(http_client),
+  logger: Pickles::Daemon::Logger.new(STDOUT)
 ).run
