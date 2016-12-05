@@ -10,7 +10,7 @@ module Pickles
 
       def update_speed_metrics(metrics)
         client.post do |request|
-          request.url "speed_metrics"
+          request.url "/speed_metrics.json"
           request.headers["Content-Type"] = "application/json"
           request.body = metrics.to_json
         end
