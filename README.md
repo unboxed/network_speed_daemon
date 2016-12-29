@@ -9,6 +9,8 @@ gem install speed-daemon-0.1.0.gem
 
 ## Usage
 
+Set `SPEED_DAEMON_API_HOST` in your env.
+
 ```
 rake nsd:install
 rake nsd:uninstall

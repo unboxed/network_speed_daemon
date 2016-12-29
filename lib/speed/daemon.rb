@@ -1,4 +1,5 @@
 require "speed/daemon/client"
+require "speed/daemon/errors"
 require "speed/daemon/logger"
 require "speed/daemon/network"
 require "speed/daemon/runner"

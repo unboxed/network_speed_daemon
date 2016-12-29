@@ -3,15 +3,19 @@
 require "bundler/setup"
 require "speed/daemon"
 
-api_host = "https://unboxed-pickles.herokuapp.com"
+api_host = ENV["SPEED_DAEMON_API_HOST"]
 
-http_client = Faraday.new(url: api_host) do |faraday|
-  faraday.adapter  Faraday.default_adapter
+if api_host.nil?
+  raise Speed::Daemon::ConfigurationError, "SPEED_DAEMON_API_HOST env var must be set."
+else
+  http_client = Faraday.new(url: api_host) do |faraday|
+    faraday.adapter  Faraday.default_adapter
+  end
+
+  Speed::Daemon::Runner.new(
+    speed: Speed::Daemon::Speed.new,
+    network: Speed::Daemon::Network.new,
+    client: Speed::Daemon::Client.new(http_client),
+    logger: Speed::Daemon::Logger.new(STDOUT)
+  ).run
 end
-
-Pickles::Daemon::Runner.new(
-  speed: Pickles::Daemon::Speed.new,
-  network: Pickles::Daemon::Network.new,
-  client: Pickles::Daemon::Client.new(http_client),
-  logger: Pickles::Daemon::Logger.new(STDOUT)
-).run
