@@ -1,4 +1,4 @@
-module Pickles
+module Speed
   module Daemon
     class Speed
       def download

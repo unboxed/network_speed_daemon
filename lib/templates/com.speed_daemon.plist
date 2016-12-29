@@ -3,7 +3,7 @@
 <plist version="1.0">
   <dict>
     <key>Label</key>
-    <string>com.network_speed_daemon.three_minutely</string>
+    <string>com.speed_daemon.three_minutely</string>
     <key>ProgramArguments</key>
         <array>
             <string>%{executable_path}</string>
@@ -12,6 +12,6 @@
     <key>RunAtLoad</key>
     <true/>
     <key>StartInterval</key>
-    <integer>20</integer>
+    <integer>180</integer>
   </dict>
 </plist>

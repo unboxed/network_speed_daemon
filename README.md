@@ -1,10 +1,10 @@
-# Pickles::Daemon
+# Speed::Daemon
 
 ## Installation
 
 ```ruby
-gem build pickles-daemon.gemspec
-gem install pickles-daemon-0.1.0.gem
+gem build speed-daemon.gemspec
+gem install speed-daemon-0.1.0.gem
 ```
 
 ## Usage
@@ -22,5 +22,5 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/pickles-daemon.
+Bug reports and pull requests are welcome on GitHub at https://github.com/unboxed/speed-daemon.
 

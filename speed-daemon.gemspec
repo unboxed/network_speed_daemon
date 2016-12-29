@@ -1,16 +1,16 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'pickles/daemon/version'
+require 'speed/daemon/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "pickles-daemon"
-  spec.version       = Pickles::Daemon::VERSION
+  spec.name          = "speed-daemon"
+  spec.version       = Speed::Daemon::VERSION
   spec.authors       = ["Chris Holmes"]
   spec.email         = ["tochrisholmes@gmail.com"]
 
-  spec.summary       = %q{Daemon for updating pickles newtork speed API.}
-  spec.description   = %q{Daemon for updating pickles newtork speed API.}
+  spec.summary       = %q{Daemon for updating newtork speed API.}
+  spec.description   = %q{Daemon for updating newtork speed API.}
   spec.homepage      = "TODO: Put your gem's website or public repo URL here."
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'

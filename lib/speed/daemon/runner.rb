@@ -1,4 +1,4 @@
-module Pickles
+module Speed
   module Daemon
     class Runner
       def initialize(speed:, network:, client:, logger:)

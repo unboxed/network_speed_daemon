@@ -1,6 +1,6 @@
 require "json"
 
-module Pickles
+module Speed
   module Daemon
     class Client
 

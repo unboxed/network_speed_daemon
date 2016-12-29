@@ -1,4 +1,4 @@
-module Pickles
+module Speed
   module Daemon
     class Logger
       def initialize(output)

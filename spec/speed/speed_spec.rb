@@ -1,6 +1,6 @@
 require "spec_helper"
 
-RSpec.describe Pickles::Daemon::Speed do
+RSpec.describe Speed::Daemon::Speed do
   describe "#download" do
     it "returns the download speed in Mbps" do
       speed = described_class.new

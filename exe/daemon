@@ -1,11 +1,11 @@
 #!/usr/bin/env ruby
 
 require "bundler/setup"
-require "pickles/daemon"
+require "speed/daemon"
 
-pickles_url = "https://unboxed-pickles.herokuapp.com"
+api_host = "https://unboxed-pickles.herokuapp.com"
 
-http_client = Faraday.new(url: pickles_url) do |faraday|
+http_client = Faraday.new(url: api_host) do |faraday|
   faraday.adapter  Faraday.default_adapter
 end
 
