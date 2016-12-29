@@ -10,8 +10,9 @@ Gem::Specification.new do |spec|
   spec.email         = ["tochrisholmes@gmail.com"]
 
   spec.summary       = %q{Daemon for updating newtork speed API.}
-  spec.description   = %q{Daemon for updating newtork speed API.}
+  spec.description   = %q{Hackday project at Unboxed.}
   spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.licenses      = ["MIT"]
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
