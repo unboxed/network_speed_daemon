@@ -11,6 +11,10 @@
 
     <key>RunAtLoad</key>
     <true/>
+    <key>StandardErrorPath</key>
+    <string>%{error_log_path}</string>
+    <key>StandardOutPath</key>
+    <string>%{log_path}</string>
     <key>StartInterval</key>
     <integer>180</integer>
   </dict>
